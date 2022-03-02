@@ -2,8 +2,6 @@
 
 A starwars card game where users choose the correct user by choosing from images
 
---- 
-
 ## Summary 
 A task creation app where users can add dates and times and the usage of coreData is implemented in this app.
 
