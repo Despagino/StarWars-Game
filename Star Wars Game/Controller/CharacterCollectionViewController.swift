@@ -21,11 +21,14 @@ class CharacterCollectionViewController: UICollectionViewController, FilterSelec
     }
     
     func shuffleCharacters(for faction: String) {
+        selectedFaction = faction
         if faction == "jedi" {
+            CharacterController.jedi.shuffle()
             let jediGroup = CharacterController.jedi.prefix(3)
             displayedCharacters = Array(jediGroup)
             targetCharacter = CharacterController.sith.randomElement()
         } else if (faction == "sith") {
+            CharacterController.sith.shuffle()
             let sithGroup = CharacterController.sith.prefix(3)
             displayedCharacters = Array(sithGroup)
             targetCharacter = CharacterController.jedi.randomElement()
@@ -77,11 +80,6 @@ class CharacterCollectionViewController: UICollectionViewController, FilterSelec
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = displayedCharacters[indexPath.row]
         presentAlert(for: character)
-    }
-    
-    func selected(faction: String) {
-        selectedFaction = faction
-        shuffleCharacters(for: selectedFaction)
     }
     
     //Segue

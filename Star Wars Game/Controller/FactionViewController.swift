@@ -9,8 +9,7 @@ import UIKit
 
 protocol FilterSelectionDelegate: AnyObject {
     
-    func selected(faction: String)
-    
+    func shuffleCharacters(for faction: String)
 }
 
 
@@ -19,7 +18,7 @@ class FactionViewController: UIViewController {
     weak var delegate: FilterSelectionDelegate?
     
     @IBAction func SithButtonPressed(_ sender: UIButton) {
-        delegate?.selected(faction: "sith")
+        delegate?.shuffleCharacters(for: "sith")
         self.dismiss(animated: true)
     }
     
