@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -79,7 +80,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="17D-EQ-7aq">
-                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease" catalog="system" id="MiA-IA-TKl"/>
+                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease" catalog="system" id="MiA-IA-TKl">
+                            <connections>
+                                <segue destination="yvP-vn-KOo" kind="presentation" identifier="GoToFactionFilter" id="a9Y-aD-Ca9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="characterLabel" destination="Xt0-5s-RG7" id="Cf6-rP-Yeu"/>
@@ -95,6 +100,41 @@
                 </label>
             </objects>
             <point key="canvasLocation" x="1062.6168224299065" y="-46.004319654427647"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Nv-eS-9sy">
+            <objects>
+                <viewController id="yvP-vn-KOo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4E-xv-UVX">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-Ca-cG1">
+                                <rect key="frame" x="20" y="20" width="388" height="388"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-MM-IV6">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="388"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Oes-MM-IV6" secondAttribute="height" multiplier="1:1" id="6Le-1M-AZi"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="sith"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VKv-pm-LOE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kuj-Ca-cG1" firstAttribute="top" secondItem="VKv-pm-LOE" secondAttribute="top" constant="20" id="PlZ-B6-jq8"/>
+                            <constraint firstItem="VKv-pm-LOE" firstAttribute="trailing" secondItem="Kuj-Ca-cG1" secondAttribute="trailing" constant="20" id="XPH-w9-sEA"/>
+                            <constraint firstItem="Kuj-Ca-cG1" firstAttribute="leading" secondItem="VKv-pm-LOE" secondAttribute="leading" constant="20" id="l6U-A1-4HM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acI-PB-t6G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923.3644859813082" y="-46.004319654427647"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jn9-TG-SZQ">
@@ -121,6 +161,7 @@
     <resources>
         <image name="background" width="1200" height="675"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="sith" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

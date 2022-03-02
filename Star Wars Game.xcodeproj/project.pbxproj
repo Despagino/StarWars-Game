@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D310604E27CFCDA300001355 /* FactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D310604D27CFCDA300001355 /* FactionViewController.swift */; };
 		D3572F6727C9A57800CB5611 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3572F6627C9A57800CB5611 /* Character.swift */; };
 		D36F9D4727C9A68100765B2C /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F9D4627C9A68100765B2C /* CharacterController.swift */; };
 		D36F9D4927C9A7E400765B2C /* CharacterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F9D4827C9A7E400765B2C /* CharacterCollectionViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D310604D27CFCDA300001355 /* FactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionViewController.swift; sourceTree = "<group>"; };
 		D3572F6627C9A57800CB5611 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D36F9D4627C9A68100765B2C /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
 		D36F9D4827C9A7E400765B2C /* CharacterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				D36F9D4827C9A7E400765B2C /* CharacterCollectionViewController.swift */,
 				D36F9D4A27C9AD4100765B2C /* CharacterCollectionViewCell.swift */,
+				D310604D27CFCDA300001355 /* FactionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				D36F9D4B27C9AD4100765B2C /* CharacterCollectionViewCell.swift in Sources */,
 				D3572F6727C9A57800CB5611 /* Character.swift in Sources */,
 				D36F9D4727C9A68100765B2C /* CharacterController.swift in Sources */,
+				D310604E27CFCDA300001355 /* FactionViewController.swift in Sources */,
 				D36F9D4927C9A7E400765B2C /* CharacterCollectionViewController.swift in Sources */,
 				D391904427C95AE300490F22 /* AppDelegate.swift in Sources */,
 				D391904627C95AE300490F22 /* SceneDelegate.swift in Sources */,
