@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1062.6168224299065" y="-46.004319654427647"/>
         </scene>
-        <!--View Controller-->
+        <!--Faction View Controller-->
         <scene sceneID="0Nv-eS-9sy">
             <objects>
-                <viewController id="yvP-vn-KOo" sceneMemberID="viewController">
+                <viewController id="yvP-vn-KOo" customClass="FactionViewController" customModule="Star_Wars_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4E-xv-UVX">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,9 +119,16 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="sith"/>
+                                        <connections>
+                                            <action selector="SithButtonPressed:" destination="yvP-vn-KOo" eventType="touchUpInside" id="zy7-wx-Z1f"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jedi" translatesAutoresizingMaskIntoConstraints="NO" id="aC1-ck-bU4">
+                                <rect key="frame" x="94" y="512" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VKv-pm-LOE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,6 +167,7 @@
     </scenes>
     <resources>
         <image name="background" width="1200" height="675"/>
+        <image name="jedi" width="600" height="600"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="sith" width="180" height="180"/>
         <systemColor name="systemBackgroundColor">

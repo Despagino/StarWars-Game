@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CharacterCollectionViewController: UICollectionViewController {
-    
+class CharacterCollectionViewController: UICollectionViewController, FilterSelectionDelegate {
+        
     @IBOutlet weak var characterLabel: UILabel!
     
     private var displayedCharacters: [Character] = []
@@ -79,9 +79,17 @@ class CharacterCollectionViewController: UICollectionViewController {
         presentAlert(for: character)
     }
     
+    func selected(faction: String) {
+        selectedFaction = faction
+        shuffleCharacters(for: selectedFaction)
+    }
+    
     //Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        if segue.identifier == "GoToFactionFilter" {
+            let destinationVC = segue.destination as? FactionViewController
+            destinationVC?.delegate = self
+        }
     }
 }
 
