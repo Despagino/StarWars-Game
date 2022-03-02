@@ -41,6 +41,23 @@ class CharacterCollectionViewController: UICollectionViewController {
         characterLabel.text = "Find \(character.name)"
     }
     
+    func presentAlert(for character: Character) {
+        let success = character == targetCharacter
+        let alertController = UIAlertController(title: success ? "Good Job" : "Better Luck Next Time", message: nil, preferredStyle: .alert)
+        
+        let doneAction = UIAlertAction(title: "Done", style: .cancel)
+        let shuffleAction = UIAlertAction(title: "Shuffle", style: .default) { _
+            in
+            self.shuffleCharacters(for: self.selectedFaction)
+        }
+        alertController.addAction(doneAction)
+        if success {
+            alertController.addAction(shuffleAction)
+        }
+            
+       present(alertController, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return displayedCharacters.count
     }
@@ -58,7 +75,8 @@ class CharacterCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        let character = displayedCharacters[indexPath.row]
+        presentAlert(for: character)
     }
     
     //Segue
