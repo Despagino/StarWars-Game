@@ -65,7 +65,13 @@ class CharacterCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
     }
-    
-    
+}
 
+extension CharacterCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.frame.width / 2
+        return CGSize(width: width - 15, height: width + 30)
+    }
+    
 }

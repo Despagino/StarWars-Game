@@ -14,7 +14,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     
     func displayImage(for character: Character) {
         characterImage.image = character.photo
-        characterImage.contentMode = .scaleToFill
+        characterImage.contentMode = .scaleAspectFill
         characterImage.clipsToBounds = true
     }
     
